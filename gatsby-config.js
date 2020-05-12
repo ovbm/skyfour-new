@@ -1,4 +1,6 @@
 module.exports = {
+  // remove pathPrefix after adding real domain skyfour.ch
+  pathPrefix: "/skyfour-new",
   siteMetadata: {
     title: 'Skyfour - Hochzeitsband und Partyband - Buchen Sie Partymusik, Hochzeitsmusik und Live Jazz',
     description: 'Live-Band und Partyband - Wir liefern die perfekte Partymusik, ob als Hochzeitsband, Event-Band oder Jazzband.',
