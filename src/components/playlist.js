@@ -191,7 +191,7 @@ const PlaylistItem = styled.button`
 
 const PlayPause = styled(FontAwesomeIcon)`
   cursor: pointer;
-  font-size: 4em !important;
+  font-size: 3em !important;
   margin-right: 1em;
   @media only screen and (max-width: ${theme.dim.mobilebreakpoint}px) {
     font-size: 2em !important;

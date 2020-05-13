@@ -19,38 +19,40 @@ export default () => {
       <StyledBackgroundImage>
         <StageTitle>
           <GridContainer>
-            <Col md={6}>
-              <GridContainer>
-                <h2>Kontakt</h2>
-                <p>
-                  Kontaktieren Sie uns um die richtige Musik für Ihren Event zu
-                  finden!
-                </p>
-                <p>
-                  Teilen Sie uns Anlass, Datum, Ort, gewünschte Spieldauer und
-                  spezielle Musikwünsche mit. Wir melden uns umgehend mit einer
-                  passenden Offerte bei Ihnen.
-                </p>
-                <p>
-                  Sie können sich auch per Email an
-                  {' '}
-                  <OutboundLink href="mailto:ramon.oliveras@skyfour.ch">
-                    ramon.oliveras@skyfour.ch
-                  </OutboundLink>
-                  {' '}
-                  wenden oder telefonisch unter
-                  {' '}
-                  <OutboundLink href="tel:+41798256354">
-                    079 825 63 54
-                  </OutboundLink>
-                  {' '}
-                  .
-                </p>
-              </GridContainer>
-            </Col>
-            <Col md={6}>
-              <ContactForm />
-            </Col>
+            <Row>
+              <Col md={6}>
+                <GridContainer>
+                  <h2>Kontakt</h2>
+                  <p>
+                    Kontaktieren Sie uns um die richtige Musik für Ihren Event zu
+                    finden!
+                  </p>
+                  <p>
+                    Teilen Sie uns Anlass, Datum, Ort, gewünschte Spieldauer und
+                    spezielle Musikwünsche mit. Wir melden uns umgehend mit einer
+                    passenden Offerte bei Ihnen.
+                  </p>
+                  <p>
+                    Sie können sich auch per Email an
+                    {' '}
+                    <OutboundLink href="mailto:ramon.oliveras@skyfour.ch">
+                      ramon.oliveras@skyfour.ch
+                    </OutboundLink>
+                    {' '}
+                    wenden oder telefonisch unter
+                    {' '}
+                    <OutboundLink href="tel:+41798256354">
+                      079 825 63 54
+                    </OutboundLink>
+                    {' '}
+                    .
+                  </p>
+                </GridContainer>
+              </Col>
+              <Col md={6}>
+                <ContactForm />
+              </Col>
+            </Row>
           </GridContainer>
         </StageTitle>
       </StyledBackgroundImage>

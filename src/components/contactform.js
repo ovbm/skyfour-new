@@ -144,7 +144,7 @@ export default class extends React.Component {
         <Field required>
           <label htmlFor="message">Nachricht </label>
           <TextArea
-            rows="4"
+            rows="6"
             id="message"
             form="usrform"
             onChange={this.handleInputChange}
