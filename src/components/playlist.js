@@ -67,8 +67,8 @@ const Samples = () => {
   const [volume, setVolume] = useState(0.8);
   const [played, setPlayed] = useState(0);
   const [seeking, setSeeking] = useState(false);
-  const [url, setUrl] = useState(playlist[0].url);
-
+  const [url, setUrl] = useState(null);
+  const [firstplay, setFirstplay] = useState(true);
   const reactPlayer = useRef(null);
 
   const handleSeekMouseUp = (e) => {
@@ -104,7 +104,15 @@ const Samples = () => {
       <Player>
         <div className="playbutton">
           <PlayPause
-            onClick={() => setPlaying(!playing)}
+            onClick={() => {
+              if (firstplay) {
+                setFirstplay(false);
+                setUrl(playlist[0].url);
+                setPlaying(!playing);
+              } else {
+                setPlaying(!playing);
+              }
+            }}
             color="white"
             icon={playing ? faPause : faPlay}
           />

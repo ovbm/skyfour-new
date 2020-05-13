@@ -78,7 +78,7 @@ export default () => {
                 Live Musik für Trauungen, Apéros und andere intime Momente.
               </p>
               <h3 style={{ marginBottom: '0.25em' }}>
-                Jazzband im Tiro oder Quartett
+                Jazzband im Trio oder Quartett
               </h3>
 
               <p style={{ fontWeight: 600, marginBottom: '0.5em' }}>
