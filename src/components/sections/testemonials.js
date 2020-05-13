@@ -26,7 +26,7 @@ const Testemonials = () => {
         >
           Kunden-Feedback
         </h2>
-        <Col md={6} offset={{md: 3}}>
+        <Col md={6} offset={{ md: 3 }}>
           <CarouselProvider
             isIntrinsicHeight
             infinite
@@ -47,43 +47,51 @@ const Testemonials = () => {
               </SSlide>
               <SSlide index={1}>
                 <Testemonial>
-                  Wir hatten am Samstag sozusagen die Party unseres Lebens und
-                  eure Musik war grosse Klasse. Die Gäste waren begeistert.
-                  Vielen Dank!
+                  Das Fest war ein voller Erfolg und Skyfour haben das einfach
+                  super toll gemacht! Wir haben rundum Komplimente wegen der
+                  Band erhalten, denn nicht nur der Gesang und die Musik waren
+                  wunderschön, sondern auch die Bandmitglieder mega symphatisch.
+                  Nochmals ein riesengrosses Dankeschön.
                 </Testemonial>
-                <Quelle>Silvia und Robert</Quelle>
+                <Quelle>Leda und Andrea</Quelle>
               </SSlide>
               <SSlide index={2}>
                 <Testemonial>
-                  Wir hatten am Samstag sozusagen die Party unseres Lebens und
-                  eure Musik war grosse Klasse. Die Gäste waren begeistert.
-                  Vielen Dank!
+                  Wir möchten Euch ein grosses Kompliment machen und uns bei
+                  euch herzlich für die musikalische Begleitung unserer Hochzeit
+                  bedanken. Ihr wart eine grosse Bereicherung für unseren
+                  wichtigen Tag und habt sowohl bei der Zeremonie als auch beim
+                  Festen für die passende Stimmung gesorgt! Ihr wart die Krönung
+                  unserer Party!
                 </Testemonial>
-                <Quelle>Silvia und Robert</Quelle>
+                <Quelle>Monika und Quan</Quelle>
               </SSlide>
               <SSlide index={3}>
                 <Testemonial>
-                  Wir hatten am Samstag sozusagen die Party unseres Lebens und
-                  eure Musik war grosse Klasse. Die Gäste waren begeistert.
-                  Vielen Dank!
+                  Wir möchten uns nochmals ganz herzlich bei Skyfour bedanken.
+                  Eure Musik hat unser Fest zu dem gemacht was es war. Es war
+                  einfach wunderschön!
                 </Testemonial>
-                <Quelle>Silvia und Robert</Quelle>
+                <Quelle>Katherine und Silvio</Quelle>
               </SSlide>
               <SSlide index={4}>
                 <Testemonial>
-                  Wir hatten am Samstag sozusagen die Party unseres Lebens und
-                  eure Musik war grosse Klasse. Die Gäste waren begeistert.
-                  Vielen Dank!
+                  Unser Tag war absolut der Hammer. Von A-Z, Also auch S wie
+                  Skyfour. Die Musik war toll, genau so wie wir es uns
+                  vorgestellt hatten: Eine coole Jazz Band die im Hintergrund
+                  Atmosphäre macht. Wir werden euch gerne weiterempfehlen.
                 </Testemonial>
-                <Quelle>Silvia und Robert</Quelle>
+                <Quelle>Jeannine und Mike</Quelle>
               </SSlide>
               <SSlide index={5}>
                 <Testemonial>
-                  Wir hatten am Samstag sozusagen die Party unseres Lebens und
-                  eure Musik war grosse Klasse. Die Gäste waren begeistert.
-                  Vielen Dank!
+                  Wir möchten euch ganz herzlich danken. Ihr habt ganz viel zur
+                  ausgelassenen und tollen Stimmung beigetragen. Eure Musik
+                  erreichte unsere Herzen total. Und nicht nur unsere.....wir
+                  bekamen viele schöne Feedbacks von unseren Gästen. Die Band
+                  war einfach der HAMMER. Schön seit ihr dabei gewesen.
                 </Testemonial>
-                <Quelle>Silvia und Robert</Quelle>
+                <Quelle>Diana und Philip</Quelle>
               </SSlide>
             </Slider>
             <SDotGroup />

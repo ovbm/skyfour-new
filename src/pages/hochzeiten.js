@@ -93,7 +93,7 @@ export default () => {
           <Row>
             <StyledCol md={4}>
               <h2>120</h2>
-              <p>Über 100 Hochzeiten begleitet seit 2014.</p>
+              <p>Über 120 Hochzeiten begleitet seit 2014.</p>
             </StyledCol>
             <StyledCol md={4}>
               <h2>360</h2>

@@ -6,6 +6,8 @@ import styled, { keyframes } from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
 
+import theme from '../utils/themeconstants';
+
 export default () => (
   <AnimatedArrow size="2x" color="white" icon={faChevronDown} />
 )
@@ -26,11 +28,15 @@ const AnimatedArrow = styled(FontAwesomeIcon)`
 position: absolute;
 transform: translateX(50%);
 box-shadow: 0 0 15 rgba(0,0,0,0.8);
-bottom: 0;
+bottom: 1em;
 left: 50%;
+margin-left: -15px;
 animation: ${arrowBounce} 2s ease;
 animation-delay: 0;
 opacity: 0;
 animation-iteration-count: infinite;
 animation-fill-mode: forwards;
+@media only screen and (max-width: ${theme.dim.mobilebreakpoint}px) {
+  bottom: 2em;
+  }
 `;
