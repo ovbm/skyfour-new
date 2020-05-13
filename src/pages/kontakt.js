@@ -2,7 +2,7 @@ import React from 'react';
 import styled, { keyframes } from 'styled-components';
 import { useStaticQuery, graphql } from 'gatsby';
 import { Container as GridContainer, Row, Col } from 'react-grid-system';
-import { OutboundLink } from "gatsby-plugin-google-analytics"
+import { OutboundLink } from 'gatsby-plugin-google-analytics';
 
 import Layout from '../components/layout';
 import SEO from '../components/seo';
@@ -19,8 +19,8 @@ export default () => {
       <StyledBackgroundImage>
         <StageTitle>
           <GridContainer>
-            <Row>
-              <Col md={6}>
+            <Col md={6}>
+              <GridContainer>
                 <h2>Kontakt</h2>
                 <p>
                   Kontaktieren Sie uns um die richtige Musik für Ihren Event zu
@@ -38,17 +38,19 @@ export default () => {
                     ramon.oliveras@skyfour.ch
                   </OutboundLink>
                   {' '}
-                  wenden oder telefonisch unter 
+                  wenden oder telefonisch unter
                   {' '}
-                  <OutboundLink href="tel:+41798256354">079 825 63 54</OutboundLink>
+                  <OutboundLink href="tel:+41798256354">
+                    079 825 63 54
+                  </OutboundLink>
                   {' '}
                   .
                 </p>
-              </Col>
-              <Col md={6}>
-                <ContactForm />
-              </Col>
-            </Row>
+              </GridContainer>
+            </Col>
+            <Col md={6}>
+              <ContactForm />
+            </Col>
           </GridContainer>
         </StageTitle>
       </StyledBackgroundImage>

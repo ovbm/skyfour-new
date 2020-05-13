@@ -41,14 +41,16 @@ export default () => {
           <Row>
             <Col md={6}>
               <StageTitle>
-                <h1>Repertoire</h1>
-                <p style={{ marginBottom: '2.2rem' }}>
-                  Gerne berücksichtigen wir Ihre individuellen Songwünsche.
-                  Werfen Sie einen Blick auf unsere Songliste.
-                </p>
-                <Button outward color="white" href="/Repertoire-Skyfour.pdf">
-                  Repertoire (PDF)
-                </Button>
+                <GridContainer>
+                  <h1>Repertoire</h1>
+                  <p style={{ marginBottom: '2.2rem' }}>
+                    Gerne berücksichtigen wir Ihre individuellen Songwünsche.
+                    Werfen Sie einen Blick auf unsere Songliste.
+                  </p>
+                  <Button outward color="white" href="/Repertoire-Skyfour.pdf">
+                    Repertoire (PDF)
+                  </Button>
+                </GridContainer>
               </StageTitle>
             </Col>
           </Row>

@@ -10,8 +10,10 @@ const Offerte = () => {
   return (
     <Section>
       <GridContainer>
-        <Row style={{alignItems: 'center', flexDirection: 'column'}}>
-          <p>Holen Sie sich eine unverbindliche Offerte ein</p>
+        <Row style={{ alignItems: 'center', flexDirection: 'column' }}>
+          <p style={{ textAlign: 'center' }}>
+            Holen Sie sich eine unverbindliche Offerte ein
+          </p>
           <Button to="/kontakt" color={theme.colors.primary}>
             Offerte einholen
           </Button>
@@ -22,5 +24,3 @@ const Offerte = () => {
 };
 
 export default Offerte;
-
-

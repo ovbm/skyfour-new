@@ -148,11 +148,16 @@ const LogoBox = styled(Col)`
   align-items: center;
   margin-bottom: 4em;
 `;
+
 const KundenLogo = styled.img`
   max-width: 200px;
   max-height: 60px;
   margin: 0;
   opacity: 0.5;
+  @media only screen and (max-width: ${theme.dim.mobilebreakpoint}px) {
+    max-width: 240px;
+    max-height: 100px;
+  }
 `;
 
 const StyledParallax = styled(Parallax)`
@@ -163,6 +168,7 @@ const StyledParallax = styled(Parallax)`
   animation-delay: 0s;
   opacity: 0;
   animation-fill-mode: forwards;
+  margin: 0;
   @media only screen and (max-width: ${theme.dim.mobilebreakpoint}px) {
     padding: 4em 1em 2em 1em;
   }

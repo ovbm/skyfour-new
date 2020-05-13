@@ -7,6 +7,7 @@ import { faCircle, faPlay, faPause } from '@fortawesome/free-solid-svg-icons';
 import { trackCustomEvent } from 'gatsby-plugin-google-analytics';
 
 import '../utils/range.scss';
+import theme from '../utils/themeconstants';
 
 const playlist = [
   {
@@ -104,17 +105,11 @@ const Samples = () => {
         <div className="playbutton">
           <PlayPause
             onClick={() => setPlaying(!playing)}
-            size="2x"
             color="white"
             icon={playing ? faPause : faPlay}
           />
         </div>
         <Seeker>
-          {/* <Progress
-            percent={played * 100}
-            strokeColor="white"
-            showInfo={false}
-          /> */}
           <input
             style={{ backgroundColor: 'transparent', outline: '0 !important' }}
             type="range"
@@ -131,14 +126,6 @@ const Samples = () => {
       <Playlist>
         {playlist.map((item) => (
           <li key={item.name}>
-            {url === item.url && (
-              <PlayPause
-                onClick={() => setPlaying(!playing)}
-                size="xs"
-                color="rgba(255,255,255,0.8)"
-                icon={faCircle}
-              />
-            )}
             <PlaylistItem
               type="button"
               onClick={() => {
@@ -147,6 +134,13 @@ const Samples = () => {
                 setPlaying(true);
               }}
             >
+              {url === item.url && (
+                <PlayDot
+                  onClick={() => setPlaying(!playing)}
+                  color="rgba(255,255,255,0.8)"
+                  icon={faCircle}
+                />
+              )}
               {item.name}
             </PlaylistItem>
           </li>
@@ -165,6 +159,11 @@ const Container = styled.div`
   border-radius: 2em;
   margin: 1em;
   backdrop-filter: blur(20px) brightness(80%);
+  @media only screen and (max-width: ${theme.dim.mobilebreakpoint}px) {
+    margin: 0;
+    padding: 0.5em;
+    border-radius: 1em;
+  }
 `;
 
 const Player = styled.div`
@@ -187,12 +186,24 @@ const PlaylistItem = styled.button`
   color: white;
   font-weight: 500;
   cursor: pointer;
+  text-align: left;
 `;
 
 const PlayPause = styled(FontAwesomeIcon)`
   cursor: pointer;
-  font-size: 4em;
+  font-size: 4em !important;
   margin-right: 1em;
+  @media only screen and (max-width: ${theme.dim.mobilebreakpoint}px) {
+    font-size: 2em !important;
+  }
+`;
+
+const PlayDot = styled(FontAwesomeIcon)`
+  font-size: 1em;
+  margin-right: 1em !important;
+  @media only screen and (max-width: ${theme.dim.mobilebreakpoint}px) {
+    font-size: 0.75em !important;
+  }
 `;
 
 const Seeker = styled.div`

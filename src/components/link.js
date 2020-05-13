@@ -18,7 +18,7 @@ const StyledLink = styled(Link)`
     if (props.linkcolor) {
       return props.linkcolor;
     }
-    return theme.colors.yellow;
+    return theme.colors.blue;
   }
 };
   transition: opacity 0.4s, color 0.4s;
@@ -40,7 +40,7 @@ const StyledOutwardLink = styled.a`
     if (props.linkcolor) {
       return props.linkcolor;
     }
-    return theme.colors.yellow;
+    return theme.colors.blue;
   }
 };  transition: opacity 0.4s;
   :hover {
@@ -76,7 +76,7 @@ export default function link({
       partiallyActive={partiallyActive}
       activeStyle={
             mobilemenu ? {
-              color: theme.colors.red,
+              color: theme.colors.blue,
             } : {
               color: linkcolor,
               fontWeight: 900,

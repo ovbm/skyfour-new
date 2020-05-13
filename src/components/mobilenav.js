@@ -3,6 +3,65 @@ import styled from 'styled-components';
 
 import Link from './link';
 
+export default class mobilenav extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      expanded: 'company',
+    };
+  }
+
+  handleExpand = (value) => {
+    this.setState({
+      expanded: value,
+    });
+  }
+
+  render() {
+    const { mobileNavExpanded } = this.props;
+    const { expanded } = this.state;
+    return (
+      <SlideOutNav>
+        <Container>
+          <MenuContainer mobileNavExpanded={mobileNavExpanded}>
+            <List>
+              <Item>
+                <StyledLink>
+                  <Link mobilemenu="true" to="/">Skyfour</Link>
+                </StyledLink>
+              </Item>
+              <Item>
+                <StyledLink>
+                  <Link mobilemenu="true" to="/musik-repertoire">Repertoire</Link>
+                </StyledLink>
+              </Item>
+              <Item>
+                <StyledLink>
+                  <Link mobilemenu="true" to="/hochzeiten">Hochzeiten</Link>
+                </StyledLink>
+              </Item>
+              <Item>
+                <StyledLink>
+                  <Link mobilemenu="true" to="/kunden-und-referenzen">Referenzen</Link>
+                </StyledLink>
+              </Item>
+              <Item>
+                <StyledLink>
+                  <Link mobilemenu="true" to="/kontakt">Kontakt</Link>
+                </StyledLink>
+              </Item>
+            </List>
+          </MenuContainer>
+        </Container>
+      </SlideOutNav>
+    );
+  }
+}
+const StyledLink = styled.h3`
+  font-weight: 500;
+  margin-bottom: 1em !important;
+`;
+
 const SlideOutNav = styled.div`
   width: 80vw;
   min-width: 300px;
@@ -59,58 +118,3 @@ const List = styled.ul`
 
 const Item = styled.li`
 `;
-
-export default class mobilenav extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      expanded: 'company',
-    };
-  }
-
-  handleExpand = (value) => {
-    this.setState({
-      expanded: value,
-    });
-  }
-
-  render() {
-    const { mobileNavExpanded } = this.props;
-    const { expanded } = this.state;
-    return (
-      <SlideOutNav>
-        <Container>
-          <MenuContainer mobileNavExpanded={mobileNavExpanded}>
-            <List>
-              <Item>
-                <h3>
-                  <Link mobilemenu="true" to="/">Skyfour</Link>
-                </h3>
-              </Item>
-              <Item>
-                <h3 style={{ marginBottom: '0.5rem' }}>
-                  <Link mobilemenu="true" to="/musik-repertoire">Repertoire</Link>
-                </h3>
-              </Item>
-              <Item>
-                <h3>
-                  <Link mobilemenu="true" to="/hochzeiten">Hochzeiten</Link>
-                </h3>
-              </Item>
-              <Item>
-                <h3>
-                  <Link mobilemenu="true" to="/kunden-und-referenzen">Referenzen</Link>
-                </h3>
-              </Item>
-              <Item>
-                <h3>
-                  <Link mobilemenu="true" to="/kontakt">Kontakt</Link>
-                </h3>
-              </Item>
-            </List>
-          </MenuContainer>
-        </Container>
-      </SlideOutNav>
-    );
-  }
-}

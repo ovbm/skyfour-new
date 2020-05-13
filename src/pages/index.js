@@ -41,11 +41,14 @@ export default () => {
           <Row>
             <Col md={6}>
               <StageTitle>
-                <h1>Musik für unvergessliche Momente</h1>
-                <p style={{ marginBottom: '2.2rem' }}>
-                  Ihre Live Band für den perfekten Sound. Ob intimer Jazz oder
-                  energetische Partymusik, wir sorgen für die richtige Stimmung.
-                </p>
+                <GridContainer>
+                  <h1>Musik für unvergessliche Momente</h1>
+                  <p style={{ marginBottom: '2.2rem' }}>
+                    Ihre Live Band für den perfekten Sound. Ob intimer Jazz oder
+                    energetische Partymusik, wir sorgen für die richtige
+                    Stimmung.
+                  </p>
+                </GridContainer>
               </StageTitle>
             </Col>
           </Row>

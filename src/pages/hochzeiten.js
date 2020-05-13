@@ -45,40 +45,43 @@ export default () => {
           <Row>
             <Col md={6} offset={{ md: 6 }}>
               <StageTitle>
-                <h1>Magische Hochzeiten mit Skyfour</h1>
-                <List>
-                  <li>
-                    <p>
-                      <FontAwesomeIcon
-                        style={{ marginRight: '6px' }}
-                        color="white"
-                        icon={faHeart}
-                      />
-                      Von Trauung über Dinner bis zur Party, alles aus einem
-                      Guss.
-                    </p>
-                  </li>
-                  <li>
-                    <p>
-                      <FontAwesomeIcon
-                        style={{ marginRight: '6px' }}
-                        color="white"
-                        icon={faHeart}
-                      />
-                      Inklusive Aufbau und Installation der Soundanlage vor Ort.
-                    </p>
-                  </li>
-                  <li>
-                    <p>
-                      <FontAwesomeIcon
-                        style={{ marginRight: '6px' }}
-                        color="white"
-                        icon={faHeart}
-                      />
-                      Beratung zu Ablauf und idealer musikalischen Begleitung.
-                    </p>
-                  </li>
-                </List>
+                <GridContainer>
+                  <h1>Magische Hochzeiten mit Skyfour</h1>
+                  <List>
+                    <li>
+                      <p>
+                        <FontAwesomeIcon
+                          style={{ marginRight: '6px' }}
+                          color="white"
+                          icon={faHeart}
+                        />
+                        Von Trauung über Dinner bis zur Party, alles aus einem
+                        Guss.
+                      </p>
+                    </li>
+                    <li>
+                      <p>
+                        <FontAwesomeIcon
+                          style={{ marginRight: '6px' }}
+                          color="white"
+                          icon={faHeart}
+                        />
+                        Inklusive Aufbau und Installation der Soundanlage vor
+                        Ort.
+                      </p>
+                    </li>
+                    <li>
+                      <p>
+                        <FontAwesomeIcon
+                          style={{ marginRight: '6px' }}
+                          color="white"
+                          icon={faHeart}
+                        />
+                        Beratung zu Ablauf und idealer musikalischen Begleitung.
+                      </p>
+                    </li>
+                  </List>
+                </GridContainer>
               </StageTitle>
             </Col>
           </Row>
@@ -183,5 +186,10 @@ const StyledCol = styled(Col)`
   p {
     text-align: center;
     margin: 0;
+  }
+  @media only screen and (max-width: ${theme.dim.mobilebreakpoint}px) {
+    p {
+      margin-bottom: 2em;
+    }
   }
 `;
