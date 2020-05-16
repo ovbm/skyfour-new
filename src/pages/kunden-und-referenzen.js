@@ -35,7 +35,7 @@ export default () => {
   return (
     <Layout>
       <SEO
-        title="Skyfour - Hochzeitsband und Partyband - Referenzen"
+        title="Hochzeitsband und Partyband Skyfour - Referenzen"
         description="Live-Band und Partyband - Wir liefern die perfekte Partymusik, ob als Hochzeitsband, Event-Band oder Jazzband. Auswahl von Kunden, deren Events wir musikalisch
         begleiten durften."
         keywords={[

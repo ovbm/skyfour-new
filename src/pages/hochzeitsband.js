@@ -33,7 +33,7 @@ export default () => {
   return (
     <Layout dark>
       <SEO
-        title="Skyfour, Ihre Hochzeitsband - Buchen Sie Partymusik, Hochzeitsmusik und Live Jazz"
+        title="Hochzeitsband Skyfour - Buchen Sie Partymusik, Hochzeitsmusik und Live Jazz"
         description="Skyfour is die Live-Band für Ihre Hochzeit. Wir sorgen für die pefekte musikalische Begleitung."
       />
       <StyledBackgroundImage

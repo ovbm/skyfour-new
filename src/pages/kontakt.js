@@ -13,7 +13,7 @@ export default () => {
   return (
     <Layout>
       <SEO
-        title="Skyfour - Hochzeitsband und Partyband - Konkakt und unverbindliche Offerte"
+        title="Hochzeitsband und Partyband Skyfour - Konkakt und unverbindliche Offerte"
         description="Wir liefern die perfekte Partymusik, ob als Hochzeitsband, Event-Band oder Jazzband. Kontaktieren Sie uns um die richtige Musik für Ihren Event zu
         finden!"
       />
