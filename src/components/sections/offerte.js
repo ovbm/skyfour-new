@@ -12,7 +12,8 @@ const Offerte = () => {
       <GridContainer>
         <Row style={{ alignItems: 'center', flexDirection: 'column' }}>
           <p style={{ textAlign: 'center' }}>
-            Ob als Hochzeitsband, Partyband oder Jazzband, holen Sie sich eine unverbindliche Offerte ein.
+            Holen Sie sich eine unverbindliche Offerte ein und buchen Sie
+            Skyfour als Hochzeitsband, Partyband oder Jazzband.
           </p>
           <Button to="/kontakt" color={theme.colors.primary}>
             Offerte einholen

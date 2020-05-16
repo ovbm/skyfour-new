@@ -11,6 +11,8 @@ import Section from '../components/section';
 import SEO from '../components/seo';
 import theme from '../utils/themeconstants';
 import Testemonials from '../components/sections/testemonials';
+import Formationen from '../components/sections/formationen';
+import ListeningSamples from '../components/sections/listening-samples';
 import Offerte from '../components/sections/offerte';
 import Arrow from '../components/arrow';
 
@@ -40,6 +42,7 @@ export default () => {
         strength={200}
         bgImage={backgroundwedding.childImageSharp.fluid.src}
         bgImageStyle={{ objectFit: 'cover' }}
+        alt="Hochzeitsband Skyfour"
       >
         <GridContainer>
           <Row>
@@ -93,11 +96,13 @@ export default () => {
           <Row>
             <StyledCol md={4}>
               <h2>120</h2>
-              <p>Über 120 Hochzeiten begleitet seit 2014.</p>
+              <p>Über 120 Hochzeiten in der Schweiz begleitet seit 2014.</p>
             </StyledCol>
             <StyledCol md={4}>
               <h2>360</h2>
-              <p>Mehr als 360 Stunden stimmungsvolle Begleitung.</p>
+              <p>
+                Mehr als 360 Stunden stimmungsvolle Musik und tolle Atmosphäre.
+              </p>
             </StyledCol>
             <StyledCol md={4}>
               <h2>1000</h2>
@@ -107,6 +112,8 @@ export default () => {
         </GridContainer>
       </Section>
       <Testemonials />
+      <ListeningSamples />
+      <Formationen />
       <Offerte />
     </Layout>
   );
