@@ -10,6 +10,7 @@ import theme from '../utils/themeconstants';
 import Section from '../components/section';
 import Offerte from '../components/sections/offerte';
 import ListeningSamples from '../components/sections/listening-samples';
+import Formationen from '../components/sections/formationen';
 import Arrow from '../components/arrow';
 
 export default () => {
@@ -105,6 +106,7 @@ export default () => {
         </GridContainer>
       </Section>
       <ListeningSamples />
+      <Formationen />
       <Offerte />
     </Layout>
   );

@@ -37,7 +37,7 @@ export default class mobilenav extends React.Component {
               </Item>
               <Item>
                 <StyledLink>
-                  <Link mobilemenu="true" to="/hochzeiten">Hochzeiten</Link>
+                  <Link mobilemenu="true" to="/hochzeitsband">Hochzeitsband</Link>
                 </StyledLink>
               </Item>
               <Item>

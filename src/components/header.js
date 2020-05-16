@@ -45,8 +45,8 @@ const Header = ({ dark, siteTitle, burgerClick, parent }) => {
                   </Link>
                 </Item>
                 <Item dark={dark} isSticky={isSticky}>
-                  <Link to="/hochzeiten" linkcolor={linkcolor}>
-                    Hochzeiten
+                  <Link to="/hochzeitsband" linkcolor={linkcolor}>
+                    Hochzeitsband
                   </Link>
                 </Item>
                 <Item dark={dark} isSticky={isSticky}>
