@@ -15,7 +15,14 @@ module.exports = {
     },
     'gatsby-plugin-remove-trailing-slashes',
     'gatsby-plugin-sass',
-    'gatsby-plugin-react-helmet', {
+    'gatsby-plugin-react-helmet',
+    {
+      resolve: `gatsby-plugin-react-helmet-canonical-urls`,
+      options: {
+        siteUrl: `https://skyfour.ch`,
+      },
+    },
+    {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'images',
