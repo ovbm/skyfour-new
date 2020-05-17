@@ -5,7 +5,13 @@ import SEO from '../components/seo';
 
 const NotFoundPage = () => (
   <Layout>
-    <SEO title="404: Not found" meta="<meta name='robots' content='noindex'>" />
+    <SEO
+      title="404: Not found"
+      meta={{
+        name: 'robots',
+        content: 'noindex',
+      }}
+    />
     <div
       style={{
         height: '100vh',
