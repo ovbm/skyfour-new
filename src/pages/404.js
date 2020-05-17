@@ -5,12 +5,13 @@ import SEO from '../components/seo';
 
 const NotFoundPage = () => (
   <Layout>
-    <SEO title="404: Not found" />
+    <SEO title="404: Not found" meta="<meta name='robots' content='noindex'>" />
     <div
       style={{
         height: '100vh',
         backgroundColor: 'white',
         display: 'flex',
+        flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'center',
         padding: '0 2em',
