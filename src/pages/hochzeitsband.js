@@ -35,8 +35,8 @@ export default () => {
   return (
     <Layout dark>
       <SEO
-        title="Hochzeitsband Skyfour - Buchen Sie Partymusik, Hochzeitsmusik und Live Jazz"
-        description="Skyfour is die Live-Band für Ihre Hochzeit. Die Hochzeitsband Skyfour sorgt für die pefekte musikalische Begleitung."
+        title="Hochzeitsband Skyfour - Die Live Band für Hochzeiten. Partymusik, Hochzeitsmusik und Live Jazz"
+        description="Skyfour is die Live Band für Hochzeiten. Die Hochzeitsband Skyfour sorgt für die pefekte musikalische Begleitung."
       />
       <StyledBackgroundImage
         strength={200}
@@ -49,7 +49,7 @@ export default () => {
             <Col md={6} offset={{ md: 6 }}>
               <StageTitle>
                 <GridContainer>
-                  <h1>Magische Hochzeiten mit Skyfour</h1>
+                  <h1>Magische Hochzeiten mit der Hochzeitsband Skyfour</h1>
                   <List>
                     <li>
                       <p>
