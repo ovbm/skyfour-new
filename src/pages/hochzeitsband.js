@@ -24,8 +24,8 @@ export default () => {
           relativePath: { eq: "background-wedding.jpg" }
         ) {
           childImageSharp {
-            fluid(maxWidth: 1920, quality: 80) {
-              ...GatsbyImageSharpFluid_noBase64
+            fluid(maxWidth: 1920, quality: 70) {
+              ...GatsbyImageSharpFluid_withWebp_noBase64
             }
           }
         }
