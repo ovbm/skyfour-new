@@ -9,6 +9,7 @@ import theme from '../utils/themeconstants';
 import Header from './header';
 import Footer from './footer';
 import MobileNav from './mobilenav';
+import FontStyles from '../utils/fontstyles';
 
 const ContentBody = styled.div`
   z-index: 10;
@@ -102,6 +103,7 @@ class Layout extends React.Component {
     const { mobileNavExpanded, windowHeight, contentFullHeight } = this.state;
     return (
       <>
+        <FontStyles />
         <ContentBody
           dark={dark}
           mobileNavExpanded={mobileNavExpanded}

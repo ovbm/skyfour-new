@@ -7,7 +7,7 @@ import { Parallax } from 'react-parallax';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 import theme from '../utils/themeconstants';
-import Section from '../components/section';
+import Testemonials from '../components/sections/testemonials';
 
 import kundeSwisscom from '../images/kunden/kunde_swisscom.png';
 import kundeKkl from '../images/kunden/kunde_kkl.png';
@@ -101,6 +101,7 @@ export default () => {
           </GridContainer>
         </StageTitle>
       </StyledParallax>
+      <Testemonials />
     </Layout>
   );
 };

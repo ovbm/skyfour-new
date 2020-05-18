@@ -94,14 +94,12 @@ const StageTitle = styled.div`
   opacity: 0;
   animation-fill-mode: forwards;
   h1 {
-    font-size: 42px;
   }
   p {
     line-height: 2;
   }
   h3 {
     font-weight: lighter;
-    font-size: 18px;
     margin-bottom: 8px;
   }
 `;

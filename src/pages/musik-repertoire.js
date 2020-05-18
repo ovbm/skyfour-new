@@ -157,16 +157,16 @@ const StageTitle = styled.div`
   opacity: 0;
   animation-fill-mode: forwards;
   h1 {
-    font-size: 42px;
     color: white;
+    text-shadow: 0px 0px 10px rgba(0,0,0,0.4);
   }
   p {
     line-height: 1.2;
+    text-shadow: 0px 0px 10px rgba(0,0,0,0.4);
     color: white;
   }
   h3 {
     font-weight: lighter;
-    font-size: 18px;
     margin-bottom: 8px;
     color: white;
   }

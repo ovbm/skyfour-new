@@ -78,7 +78,7 @@ const Header = ({ dark, siteTitle, burgerClick, parent }) => {
 export default Header;
 
 const TopHeader = styled.header`
-  position: ${(props) => (props.isSticky ? 'fixed' : 'absolute')};
+  position: fixed;
   background-color:  ${(props) => (props.isSticky ? 'rgba(255,255,255,1)' : 'rgba(255,255,255,0)')};
   top: 0;
   padding: 20px 0px;
@@ -88,9 +88,6 @@ const TopHeader = styled.header`
   align-items: center;
   justify-content: center;
   transition: background-color 0.4s;
-  @media only screen and (max-width: ${theme.dim.mobilebreakpoint}px) {
-    position: absolute;
-  }
 `;
 
 const Container = styled.div`
@@ -124,7 +121,6 @@ const List = styled.ul`
 const Item = styled.li`
   list-style: none;
   margin: 0;
-  font-family: 'Nunito Sans', 'Helvetica Neue', 'Arial', 'sans-serif';
   a {
     white-space: nowrap;
     text-shadow: ${(props) =>
@@ -146,7 +142,6 @@ const Item = styled.li`
   &.burger {
     color: ${(props) => props.linkcolor};
     display: none;
-    height: 40px;
     font-weight: bold;
     cursor: pointer;
     @media only screen and (max-width: ${theme.dim.mobilebreakpoint}px) {

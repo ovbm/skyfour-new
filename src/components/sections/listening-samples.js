@@ -1,7 +1,7 @@
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import { Container as GridContainer, Row, Col } from 'react-grid-system';
-import { Parallax } from 'react-parallax';
+import BackgroundImage from 'gatsby-background-image';
 import styled from 'styled-components';
 
 import Section from '../section';
@@ -10,24 +10,37 @@ import theme from '../../utils/themeconstants';
 import Playlist from '../playlist';
 
 const ListeningSamples = () => {
-  const { bgPlaylist } = useStaticQuery(
+  const { bgPlaylistDesktop, bgPlaylistMobile } = useStaticQuery(
     graphql`
       query {
-        bgPlaylist: file(relativePath: { eq: "background2.jpg" }) {
+        bgPlaylistDesktop: file(relativePath: { eq: "background2.jpg" }) {
           childImageSharp {
-            fluid(maxWidth: 1920, quality: 80) {
-              ...GatsbyImageSharpFluid_noBase64
+            fluid(maxWidth: 1920, quality: 70) {
+              ...GatsbyImageSharpFluid_withWebp_noBase64
+            }
+          }
+        }
+        bgPlaylistMobile: file(relativePath: { eq: "background2.jpg" }) {
+          childImageSharp {
+            fluid(maxHeight: 720, quality: 70) {
+              ...GatsbyImageSharpFluid_withWebp_noBase64
             }
           }
         }
       }
     `,
   );
+  const sources = [
+    bgPlaylistDesktop.childImageSharp.fluid,
+    {
+      ...bgPlaylistMobile.childImageSharp.fluid,
+      media: `(max-width: ${theme.dim.mobilebreakpoint}px)`,
+    },
+  ]
   return (
-    <StyledParallax
-      strength={200}
-      bgImage={bgPlaylist.childImageSharp.fluid.src}
-      bgImageStyle={{ objectFit: 'cover' }}
+    <StyledBackgroundImage
+      fluid={sources}
+      backgroundColor="#000000"
     >
       <GridContainer>
         <Row>
@@ -46,13 +59,13 @@ const ListeningSamples = () => {
           </Col>
         </Row>
       </GridContainer>
-    </StyledParallax>
+    </StyledBackgroundImage>
   );
 };
 
 export default ListeningSamples;
 
-const StyledParallax = styled(Parallax)`
+const StyledBackgroundImage = styled(BackgroundImage)`
   padding: 6em 0 4em 0;
   background-color: ${(props) =>
     props.dark ? 'black' : theme.colors.bgPrimary};

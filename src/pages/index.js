@@ -43,8 +43,14 @@ export default () => {
             <Col md={6}>
               <StageTitle>
                 <GridContainer>
-                  <h1>Musik für unvergessliche Momente</h1>
-                  <p style={{ marginBottom: '2.2rem' }}>
+                  <h1 style={{textShadow: '0px 0px 10px rgba(0,0,0,0.4)'}}>
+                    Hochzeitsband und Partyband Skyfour
+                    <br />
+                    <span style={{ fontSize: '0.4em' }}>
+                      Musik für unvergessliche Momente
+                    </span>
+                  </h1>
+                  <p style={{ marginBottom: '2.2rem', textShadow: '0px 0px 10px rgba(0,0,0,0.4)', lineHeight: 1.5 }}>
                     Ihre Live Band für den perfekten Sound. Ob intimer Jazz oder
                     energetische Partymusik, wir sorgen für die richtige
                     Stimmung.
@@ -99,7 +105,7 @@ export default () => {
                 srcDoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style><a href=https://www.youtube.com/embed/QgZj0oc_NBQ?autoplay=1><img src=https://img.youtube.com/vi/QgZj0oc_NBQ/hqdefault.jpg alt='Skyfour'><span>▶</span></a>"
                 frameBorder="0"
                 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                allowFullscreen
+                allowFullScreen
               />
             </PlayerWrapper>
           </div>
@@ -158,7 +164,6 @@ const StageTitle = styled.div`
   opacity: 0;
   animation-fill-mode: forwards;
   h1 {
-    font-size: 42px;
     color: white;
   }
   p {
@@ -167,7 +172,6 @@ const StageTitle = styled.div`
   }
   h3 {
     font-weight: lighter;
-    font-size: 18px;
     margin-bottom: 8px;
     color: white;
   }
