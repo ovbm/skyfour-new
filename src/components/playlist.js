@@ -1,5 +1,4 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { Container as GridContainer } from 'react-grid-system';
 import styled from 'styled-components';
 import Fileplayer from 'react-player/lib/players/FilePlayer';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -47,7 +46,7 @@ const playlist = [
   },
   {
     name: 'Call me Maybe (Pop)',
-    url: '01-Call-me-maybe.mp3',
+    url: 'Call-me-maybe.mp3',
     type: 'audio/mp3',
   },
   {
@@ -67,6 +66,7 @@ const Samples = () => {
   const [volume, setVolume] = useState(0.8);
   const [played, setPlayed] = useState(0);
   const [seeking, setSeeking] = useState(false);
+  const [loaded, setLoaded] = useState(0);
   const [url, setUrl] = useState(null);
   const [firstplay, setFirstplay] = useState(true);
   const reactPlayer = useRef(null);
@@ -84,6 +84,13 @@ const Samples = () => {
     }
   }, [playing]);
 
+  const handleProgress = (progress) => {
+    if (!seeking) {
+      setLoaded(progress.loaded);
+      setPlayed(progress.played);
+    }
+  };
+
   return (
     <Container>
       <Fileplayer
@@ -94,11 +101,8 @@ const Samples = () => {
         height={0}
         controls={false}
         loop={false}
-        // config={{
-        //   file: {
-        //     forceAudio: true,
-        //   },
-        // }}
+        onProgress={handleProgress}
+        progressInterval={500}
         url={[{ src: url, type: 'audio/mp3' }]}
       />
       <Player>
@@ -129,6 +133,10 @@ const Samples = () => {
             onChange={(e) => setPlayed(parseFloat(e.target.value))}
             onMouseUp={handleSeekMouseUp}
           />
+          <progress
+            max={1}
+            value={loaded}
+          />
         </Seeker>
       </Player>
       <Playlist>
@@ -137,8 +145,9 @@ const Samples = () => {
             <PlaylistItem
               type="button"
               onClick={() => {
-                setUrl(item.url);
+                setLoaded(0);
                 setPlayed(0);
+                setUrl(item.url);
                 setPlaying(true);
               }}
             >
@@ -199,7 +208,7 @@ const PlaylistItem = styled.button`
 
 const PlayPause = styled(FontAwesomeIcon)`
   cursor: pointer;
-  font-size: 3em !important;
+  font-size: 2em !important;
   margin-right: 1em;
   @media only screen and (max-width: ${theme.dim.mobilebreakpoint}px) {
     font-size: 2em !important;
