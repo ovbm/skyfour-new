@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Container as GridContainer } from 'react-grid-system';
 import styled from 'styled-components';
-import ReactPlayer from 'react-player';
+import Fileplayer from 'react-player/lib/players/FilePlayer';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCircle, faPlay, faPause } from '@fortawesome/free-solid-svg-icons';
 import { trackCustomEvent } from 'gatsby-plugin-google-analytics';
@@ -86,7 +86,7 @@ const Samples = () => {
 
   return (
     <Container>
-      <ReactPlayer
+      <Fileplayer
         ref={reactPlayer}
         playing={playing}
         volume={volume}
@@ -94,11 +94,11 @@ const Samples = () => {
         height={0}
         controls={false}
         loop={false}
-        config={{
-          file: {
-            forceAudio: true,
-          },
-        }}
+        // config={{
+        //   file: {
+        //     forceAudio: true,
+        //   },
+        // }}
         url={[{ src: url, type: 'audio/mp3' }]}
       />
       <Player>

@@ -17,6 +17,7 @@ module.exports = {
     'gatsby-plugin-remove-trailing-slashes',
     'gatsby-plugin-sass',
     'gatsby-plugin-react-helmet',
+    'gatsby-plugin-webpack-bundle-analyser-v2',
     {
       resolve: `gatsby-plugin-react-helmet-canonical-urls`,
       options: {

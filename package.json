@@ -34,7 +34,7 @@
   "react-grid-system": "^4.4.2",
   "react-helmet": "^5.2.0",
   "react-parallax": "^3.0.3",
-  "react-player": "^2.0.1",
+  "react-player": "1.15.3",
   "react-spinners": "^0.8.3",
   "react-typography": "^0.16.19",
   "styled-components": "^4.1.3",
