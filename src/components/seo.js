@@ -118,7 +118,7 @@ function SEO({
 }
 
 SEO.defaultProps = {
-  lang: 'en',
+  lang: 'de',
   meta: [],
   keywords: [
     'partyband',
