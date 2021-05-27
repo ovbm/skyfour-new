@@ -46,8 +46,8 @@ function Footer() {
               icon={faEnvelope}
             />
 
-            <OutboundLink href="mailto:ramon.oliveras@skyfour.ch">
-              ramon.oliveras@skyfour.ch
+            <OutboundLink href="mailto:kontakt@skyfour.ch">
+              kontakt@skyfour.ch
             </OutboundLink>
           </div>
         </div>
@@ -74,7 +74,8 @@ const Content = styled.div`
   display: flex;
   justify-content: center;
   .column {
-    align-content: center;
+    align-items: center;
+    display: flex;
     margin: 0 1.5em;
     p {
       margin: 0;

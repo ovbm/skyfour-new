@@ -39,6 +39,7 @@ function SEO({
               lang,
             }}
             title={title}
+            link={[{ rel: 'icon', type: 'image/png', href: 'skyfour-favicon.png' }]}
             meta={[
               {
                 name: 'description',

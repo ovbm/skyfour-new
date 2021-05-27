@@ -1,8 +1,9 @@
 import React from 'react';
 import styled, { keyframes } from 'styled-components';
+import { getSrc } from 'gatsby-plugin-image';
 import { useStaticQuery, graphql } from 'gatsby';
 import { Container as GridContainer, Row, Col } from 'react-grid-system';
-import { Parallax, Background } from 'react-parallax';
+import { Parallax } from 'react-parallax';
 
 import Section from '../components/section';
 import Button from '../components/button';
@@ -12,15 +13,13 @@ import theme from '../utils/themeconstants';
 import Arrow from '../components/arrow';
 import Offerte from '../components/sections/offerte';
 
-export default () => {
+const MusikRepertoire = () => {
   const { background2 } = useStaticQuery(
     graphql`
       query {
         background2: file(relativePath: { eq: "background2.jpg" }) {
           childImageSharp {
-            fluid(maxWidth: 1920, quality: 80) {
-              ...GatsbyImageSharpFluid_noBase64
-            }
+            gatsbyImageData(width: 1920)
           }
         }
       }
@@ -34,7 +33,7 @@ export default () => {
       />
       <StyledBackgroundImage
         strength={200}
-        bgImage={background2.childImageSharp.fluid.src}
+        bgImage={getSrc(background2)}
         bgImageStyle={{ objectFit: 'cover' }}
       >
         <GridContainer>
@@ -158,11 +157,11 @@ const StageTitle = styled.div`
   animation-fill-mode: forwards;
   h1 {
     color: white;
-    text-shadow: 0px 0px 10px rgba(0,0,0,0.4);
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
   }
   p {
     line-height: 1.2;
-    text-shadow: 0px 0px 10px rgba(0,0,0,0.4);
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
     color: white;
   }
   h3 {
@@ -171,3 +170,5 @@ const StageTitle = styled.div`
     color: white;
   }
 `;
+
+export default MusikRepertoire;

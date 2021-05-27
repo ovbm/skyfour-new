@@ -1,5 +1,6 @@
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
+import { getSrc } from 'gatsby-plugin-image';
 import { Container as GridContainer, Row, Col } from 'react-grid-system';
 import { Parallax } from 'react-parallax';
 import styled, { keyframes } from 'styled-components';
@@ -16,7 +17,7 @@ import ListeningSamples from '../components/sections/listening-samples';
 import Offerte from '../components/sections/offerte';
 import Arrow from '../components/arrow';
 
-export default () => {
+const Hochzeitsband = () => {
   const { backgroundwedding } = useStaticQuery(
     graphql`
       query {
@@ -24,9 +25,7 @@ export default () => {
           relativePath: { eq: "background-wedding.jpg" }
         ) {
           childImageSharp {
-            fluid(maxWidth: 1920, quality: 70) {
-              ...GatsbyImageSharpFluid_withWebp_noBase64
-            }
+            gatsbyImageData(width: 1920)
           }
         }
       }
@@ -40,7 +39,7 @@ export default () => {
       />
       <StyledBackgroundImage
         strength={200}
-        bgImage={backgroundwedding.childImageSharp.fluid.src}
+        bgImage={getSrc(backgroundwedding)}
         bgImageStyle={{ objectFit: 'cover' }}
         alt="Hochzeitsband Skyfour"
       >
@@ -166,12 +165,12 @@ const StageTitle = styled.div`
   animation-fill-mode: forwards;
   h1 {
     color: white;
-    text-shadow: 0px 0px 10px rgba(0,0,0,0.4);
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
   }
   p {
     line-height: 1.2;
     color: white;
-    text-shadow: 0px 0px 10px rgba(0,0,0,0.4);
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
   }
   h3 {
     font-weight: lighter;
@@ -200,3 +199,5 @@ const StyledCol = styled(Col)`
     }
   }
 `;
+
+export default Hochzeitsband;

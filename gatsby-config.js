@@ -8,12 +8,6 @@ module.exports = {
     url: 'https://skyfour.ch',
   },
   plugins: [
-    {
-      resolve: 'gatsby-plugin-favicon',
-      options: {
-        logo: './src/images/skyfour-favicon.png',
-      },
-    },
     'gatsby-plugin-remove-trailing-slashes',
     'gatsby-plugin-sass',
     'gatsby-plugin-react-helmet',
@@ -55,6 +49,7 @@ module.exports = {
       },
     },
     'gatsby-transformer-sharp',
+    'gatsby-plugin-image',
     'gatsby-plugin-sharp',
     'gatsby-plugin-remove-serviceworker',
   ],

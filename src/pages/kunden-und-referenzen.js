@@ -3,6 +3,7 @@ import { Container as GridContainer, Row, Col } from 'react-grid-system';
 import styled, { keyframes } from 'styled-components';
 import { useStaticQuery, graphql } from 'gatsby';
 import { Parallax } from 'react-parallax';
+import { getSrc } from 'gatsby-plugin-image';
 
 import Layout from '../components/layout';
 import SEO from '../components/seo';
@@ -18,15 +19,13 @@ import kundeSix from '../images/kunden/kunde_six.png';
 import kundeZkb from '../images/kunden/kunde_zkb.png';
 import kundeMarmite from '../images/kunden/kunde_marmite.png';
 
-export default () => {
+const KundenUndReferenzen = () => {
   const { background } = useStaticQuery(
     graphql`
       query {
         background: file(relativePath: { eq: "bg-new.jpg" }) {
           childImageSharp {
-            fluid(maxWidth: 1920, quality: 80) {
-              ...GatsbyImageSharpFluid_noBase64
-            }
+            gatsbyImageData(width: 1920)
           }
         }
       }
@@ -51,12 +50,12 @@ export default () => {
       />
       <StyledParallax
         strength={200}
-        bgImage={background.childImageSharp.fluid.src}
+        bgImage={getSrc(background)}
         bgImageStyle={{ objectFit: 'cover' }}
       >
         <StageTitle>
           <GridContainer>
-            <Row style={{ marginBottom:'4em' }}>
+            <Row style={{ marginBottom: '4em' }}>
               <Col md={6} offset={{ md: 3 }}>
                 <h2>Unsere Referenzen</h2>
                 <p>
@@ -175,3 +174,5 @@ const StyledParallax = styled(Parallax)`
     padding: 4em 1em 2em 1em;
   }
 `;
+
+export default KundenUndReferenzen;

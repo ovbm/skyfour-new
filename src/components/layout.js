@@ -1,5 +1,4 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -46,93 +45,70 @@ const CloseButton = styled.div`
   transform: ${(props) => (props.mobileNavExpanded ? 'scale(0.9)' : 'none')};
 `;
 
-class Layout extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      mobileNavExpanded: false,
-      contentFullHeight: true,
-      windowHeight: undefined,
-    };
-  }
+const Layout = ({ children, parent, dark }) => {
+  const [mobileNavExpanded, setMobileNavExpanded] = useState(false);
+  const [contentFullHeight, setContentFullHeight] = useState(true);
+  const [windowHeight, setWindowHeight] = useState(undefined);
 
-  updateDimensions = () => {
+  const updateDimensions = () => {
     if (typeof document !== 'undefined') {
       const body = document.getElementsByTagName('body')[0];
       const height =
         window.innerHeight ||
         document.documentElement.clientHeight ||
         body.clientHeight;
-      this.setState({ windowHeight: height });
+      setWindowHeight(height);
     }
   };
 
-  componentWillMount = () => {
-    this.updateDimensions();
-  };
-
-  componentDidMount = () => {
-    window.addEventListener('resize', this.updateDimensions);
-  };
-
-  componentWillUnmount = () => {
-    window.removeEventListener('resize', this.updateDimensions);
-  };
-
-  handleNavExpand = () => {
-    const { mobileNavExpanded } = this.state;
+  const handleNavExpand = () => {
     if (mobileNavExpanded) {
-      this.setState((prevState) => ({
-        mobileNavExpanded: !prevState.mobileNavExpanded,
-      }));
+      setMobileNavExpanded(!mobileNavExpanded);
       setTimeout(() => {
-        this.setState((prevState) => ({
-          contentFullHeight: !prevState.contentFullHeight,
-        }));
+        setContentFullHeight(!contentFullHeight);
       }, 800);
     } else {
-      this.setState((prevState) => ({
-        mobileNavExpanded: !prevState.mobileNavExpanded,
-        contentFullHeight: !prevState.contentFullHeight,
-      }));
+      setMobileNavExpanded(!mobileNavExpanded);
+      setContentFullHeight(!contentFullHeight);
     }
   };
 
-  render() {
-    const { children, parent, dark } = this.props;
-    const { mobileNavExpanded, windowHeight, contentFullHeight } = this.state;
-    return (
-      <>
-        <FontStyles />
-        <ContentBody
+  useEffect(() => {
+    updateDimensions();
+    window.addEventListener('resize', updateDimensions);
+    return () => {
+      window.removeEventListener('resize', updateDimensions);
+    };
+  }, []);
+
+  return (
+    <>
+      <FontStyles />
+      <ContentBody
+        dark={dark}
+        mobileNavExpanded={mobileNavExpanded}
+        height={windowHeight}
+        contentFullHeight={contentFullHeight}
+        onClick={() => mobileNavExpanded && handleNavExpand()}
+      >
+        <Header
+          siteTitle="Tomorrow"
+          burgerClick={handleNavExpand}
+          parent={parent}
           dark={dark}
-          mobileNavExpanded={mobileNavExpanded}
-          height={windowHeight}
-          contentFullHeight={contentFullHeight}
-          onClick={() => mobileNavExpanded && this.handleNavExpand()}
-        >
-          <Header
-            siteTitle="Tomorrow"
-            burgerClick={this.handleNavExpand}
-            parent={parent}
-            dark={dark}
-          />
-          {children}
-          <Footer />
-        </ContentBody>
-        <MobileNav mobileNavExpanded={mobileNavExpanded} />
-        <CloseButton
-          mobileNavExpanded={mobileNavExpanded}
-          onClick={this.handleNavExpand}
-        >
-          <FontAwesomeIcon color="black" icon={faTimes} />
-        </CloseButton>
-      </>
-    );
-  }
-}
-Layout.propTypes = {
-  children: PropTypes.node.isRequired,
+        />
+        {children}
+        <Footer />
+      </ContentBody>
+      <MobileNav mobileNavExpanded={mobileNavExpanded} />
+      <CloseButton
+        mobileNavExpanded={mobileNavExpanded}
+        onClick={handleNavExpand}
+      >
+        <FontAwesomeIcon color="black" icon={faTimes} />
+      </CloseButton>
+    </>
+  );
 };
 
 export default Layout;

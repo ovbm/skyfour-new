@@ -1,5 +1,5 @@
 {
-  "name": "jobapplication",
+  "name": "skyfouremail",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -22,6 +22,6 @@
   },
   "scripts": {
     "lint": "eslint --quiet .",
-    "start": "functions-framework --target=cloudfunction"
+    "start": "functions-framework --target=sendMail"
   }
 }

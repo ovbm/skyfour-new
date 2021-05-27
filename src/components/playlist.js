@@ -173,13 +173,10 @@ const Container = styled.div`
   padding: 2em;
   display: flex;
   flex-direction: column;
-  border-radius: 2em;
   margin: 1em;
-  backdrop-filter: blur(20px) brightness(80%);
   @media only screen and (max-width: ${theme.dim.mobilebreakpoint}px) {
     margin: 0;
     padding: 0.5em;
-    border-radius: 1em;
   }
 `;
 

@@ -1,6 +1,7 @@
-import React, { usEffect } from 'react';
+import React from 'react';
 import styled, { keyframes } from 'styled-components';
 import { useStaticQuery, graphql } from 'gatsby';
+import { getSrc } from 'gatsby-plugin-image';
 import { Container as GridContainer, Row, Col } from 'react-grid-system';
 import { Parallax } from 'react-parallax';
 
@@ -13,15 +14,13 @@ import ListeningSamples from '../components/sections/listening-samples';
 import Formationen from '../components/sections/formationen';
 import Arrow from '../components/arrow';
 
-export default () => {
+const Index = () => {
   const { background1 } = useStaticQuery(
     graphql`
       query {
         background1: file(relativePath: { eq: "background1.jpg" }) {
           childImageSharp {
-            fluid(maxWidth: 1920, quality: 70) {
-              ...GatsbyImageSharpFluid_withWebp_noBase64
-            }
+            gatsbyImageData(width: 1920, quality: 70)
           }
         }
       }
@@ -35,7 +34,7 @@ export default () => {
       />
       <StyledBackgroundImage
         strength={200}
-        bgImage={background1.childImageSharp.fluid.src}
+        bgImage={getSrc(background1)}
         bgImageStyle={{ objectFit: 'cover' }}
       >
         <GridContainer>
@@ -43,14 +42,20 @@ export default () => {
             <Col md={6}>
               <StageTitle>
                 <GridContainer>
-                  <h1 style={{textShadow: '0px 0px 10px rgba(0,0,0,0.4)'}}>
+                  <h1 style={{ textShadow: '0px 0px 10px rgba(0,0,0,0.4)' }}>
                     Hochzeitsband und Partyband Skyfour
                     <br />
                     <span style={{ fontSize: '0.4em' }}>
                       Musik für unvergessliche Momente
                     </span>
                   </h1>
-                  <p style={{ marginBottom: '2.2rem', textShadow: '0px 0px 10px rgba(0,0,0,0.4)', lineHeight: 1.5 }}>
+                  <p
+                    style={{
+                      marginBottom: '2.2rem',
+                      textShadow: '0px 0px 10px rgba(0,0,0,0.4)',
+                      lineHeight: 1.5,
+                    }}
+                  >
                     Ihre Live Band für den perfekten Sound. Ob intimer Jazz oder
                     energetische Partymusik, wir sorgen für die richtige
                     Stimmung.
@@ -181,3 +186,5 @@ const PlayerWrapper = styled.div`
   position: relative;
   padding-top: 56.25%; /* 720 / 1280 = 0.5625 */
 `;
+
+export default Index;
