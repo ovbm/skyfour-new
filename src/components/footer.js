@@ -25,7 +25,7 @@ function Footer() {
               color="black"
               icon={faGlobeEurope}
             />
-            8045 Zürich
+            8003 Zürich
           </p>
         </div>
         <div className="column">
@@ -35,7 +35,7 @@ function Footer() {
               color="black"
               icon={faPhoneAlt}
             />
-            <OutboundLink href="tel:+41798256354‬">0798256354‬</OutboundLink>
+            <OutboundLink href="tel:+41795388936‬">079 538 89 36‬</OutboundLink>
           </p>
         </div>
         <div className="column">

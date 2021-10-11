@@ -10,7 +10,7 @@ import theme from '../utils/themeconstants';
 
 const playlist = [
   {
-    name: "You'd be so nice (Jazz)",
+    name: "You'd be so nice (Jazzband)",
     url: 'Youd-be-so-nice.mp3',
     type: 'audio/mp3',
   },

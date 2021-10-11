@@ -36,8 +36,8 @@ const Kontakt = () => (
                     kontakt@skyfour.ch
                   </OutboundLink>{' '}
                   wenden oder telefonisch unter{' '}
-                  <OutboundLink href="tel:+41798256354">
-                    079 825 63 54
+                  <OutboundLink href="tel:+41795388936">
+                    079 538 89 36
                   </OutboundLink>{' '}
                   .
                 </p>

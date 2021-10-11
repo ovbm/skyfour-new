@@ -30,7 +30,7 @@ const Index = () => {
     <Layout dark>
       <SEO
         title="Hochzeitsband und Partyband Skyfour - Buchen Sie Partymusik, Hochzeitsmusik und Live Jazz"
-        description="Live-Band und Partyband - Wir liefern die perfekte Partymusik, ob als Hochzeitsband, Event-Band oder Jazzband."
+        description="Liveband und Partyband - Wir liefern die perfekte Partymusik, ob als Hochzeitsband, Event-Band oder Jazzband."
       />
       <StyledBackgroundImage
         strength={200}
@@ -56,7 +56,7 @@ const Index = () => {
                       lineHeight: 1.5,
                     }}
                   >
-                    Ihre Live Band für den perfekten Sound. Ob intimer Jazz oder
+                    Ihre Live Band für den perfekten Sound. Ob intime Jazzband oder
                     energetische Partymusik, wir sorgen für die richtige
                     Stimmung.
                   </p>
