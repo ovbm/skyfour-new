@@ -1,4 +1,4 @@
-## New tmrow.com frontend 💫
+## Skyfour Website 💫
 
 ### run development environment
 
@@ -9,8 +9,5 @@
     ```
     then
     ```sh
-    yarn start develop
+    yarn dev
     ```
-
-### deploy
-
