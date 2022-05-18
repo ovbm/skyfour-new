@@ -38,32 +38,40 @@ const Index = () => {
         bgImageStyle={{ objectFit: 'cover' }}
       >
         <GridContainer>
-          <Row>
-            <Col md={6}>
-              <StageTitle>
+          <Stage>
+            <Row>
+              <Col md={6}>
                 <GridContainer>
-                  <h1 style={{ textShadow: '0px 0px 10px rgba(0,0,0,0.4)' }}>
-                    Hochzeitsband und Partyband Skyfour
-                    <br />
-                    <span style={{ fontSize: '0.4em' }}>
-                      Musik für unvergessliche Momente
-                    </span>
-                  </h1>
-                  <p
-                    style={{
-                      marginBottom: '2.2rem',
-                      textShadow: '0px 0px 10px rgba(0,0,0,0.4)',
-                      lineHeight: 1.5,
-                    }}
-                  >
-                    Ihre Live Band für den perfekten Sound. Ob intime Jazzband oder
-                    energetische Partymusik, wir sorgen für die richtige
-                    Stimmung.
-                  </p>
+                  <div style={{ maxWidth: 600, margin: '0 auto' }}>
+                    <PlayerWrapper>
+                      <iframe
+                        title="skyfour video"
+                        width="100%"
+                        height="100%"
+                        style={{ position: 'absolute', top: 0, left: 0 }}
+                        src="https://www.youtube.com/embed/ulg5uH86_mM"
+                        srcDoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style><a href=https://www.youtube.com/embed/ulg5uH86_mM?autoplay=1><img src=https://img.youtube.com/vi/ulg5uH86_mM/maxresdefault.jpg alt='Skyfour'><span>▶</span></a>"
+                        frameBorder="0"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
+                      />
+                    </PlayerWrapper>
+                  </div>
                 </GridContainer>
-              </StageTitle>
-            </Col>
-          </Row>
+              </Col>
+              <Col md={6}>
+                <GridContainer>
+                  <H1>Hochzeitsband und Partyband Skyfour</H1>
+                  <TaglineP>Musik für unvergessliche Momente</TaglineP>
+                  <MissionP>
+                    Ihre Live Band für den perfekten Sound. Ob intime Jazzband
+                    oder energetische Partymusik, wir sorgen für die richtige
+                    Stimmung.
+                  </MissionP>
+                </GridContainer>
+              </Col>
+            </Row>
+          </Stage>
         </GridContainer>
         <Arrow />
       </StyledBackgroundImage>
@@ -99,21 +107,6 @@ const Index = () => {
               </p>
             </Col>
           </Row>
-          <div style={{ maxWidth: 600, margin: '2em auto 0' }}>
-            <PlayerWrapper>
-              <iframe
-                title="skyfour video"
-                width="100%"
-                height="100%"
-                style={{ position: 'absolute', top: 0, left: 0 }}
-                src="https://www.youtube.com/embed/ulg5uH86_mM"
-                srcDoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style><a href=https://www.youtube.com/embed/ulg5uH86_mM?autoplay=1><img src=https://img.youtube.com/vi/ulg5uH86_mM/maxresdefault.jpg alt='Skyfour'><span>▶</span></a>"
-                frameBorder="0"
-                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              />
-            </PlayerWrapper>
-          </div>
         </GridContainer>
       </Section>
       <ListeningSamples />
@@ -159,7 +152,7 @@ const StyledBackgroundImage = styled(Parallax)`
   }
 `;
 
-const StageTitle = styled.div`
+const Stage = styled.div`
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -168,23 +161,43 @@ const StageTitle = styled.div`
   animation-delay: 0.2s;
   opacity: 0;
   animation-fill-mode: forwards;
-  h1 {
-    color: white;
+  color: white;
+`;
+
+const H1 = styled.h1`
+  color: white;
+  text-shadow: 0px 0px 10px rgba(0, 0, 0, 1);
+  line-height: 1.1em;
+  @media only screen and (max-width: ${theme.dim.mobilebreakpoint}px) {
+    font-size: 1.75em;
+    line-height: 1.5em;
   }
-  p {
-    line-height: 1.2;
-    color: white;
+`;
+
+const TaglineP = styled.p`
+  font-size: 1.25em;
+  font-weight: bold;
+  @media only screen and (max-width: ${theme.dim.mobilebreakpoint}px) {
+    font-size: 1.15em;
   }
-  h3 {
-    font-weight: lighter;
-    margin-bottom: 8px;
-    color: white;
+`;
+
+const MissionP = styled.p`
+  margin-bottom: 2.2rem;
+  text-shadow: 0px 0px 6px rgba(0, 0, 0, 1);
+  font-weight: bold;
+  font-size: 1.1em;
+  @media only screen and (max-width: ${theme.dim.mobilebreakpoint}px) {
+    font-size: 0.9em;
   }
 `;
 
 const PlayerWrapper = styled.div`
   position: relative;
   padding-top: 56.25%; /* 720 / 1280 = 0.5625 */
+  @media only screen and (max-width: ${theme.dim.mobilebreakpoint}px) {
+    margin: 4em 0 2em 0;
+  }
 `;
 
 export default Index;

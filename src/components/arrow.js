@@ -34,6 +34,6 @@ opacity: 0;
 animation-iteration-count: infinite;
 animation-fill-mode: forwards;
 @media only screen and (max-width: ${theme.dim.mobilebreakpoint}px) {
-  bottom: 2em;
+  bottom: 0.5em;
   }
 `;
