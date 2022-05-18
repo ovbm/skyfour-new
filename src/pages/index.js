@@ -20,7 +20,7 @@ const Index = () => {
       query {
         background1: file(relativePath: { eq: "background1.jpg" }) {
           childImageSharp {
-            gatsbyImageData(width: 1920, quality: 70)
+            gatsbyImageData(width: 1920, quality: 90)
           }
         }
       }
