@@ -106,8 +106,8 @@ const Index = () => {
                 width="100%"
                 height="100%"
                 style={{ position: 'absolute', top: 0, left: 0 }}
-                src="https://www.youtube.com/embed/QgZj0oc_NBQ"
-                srcDoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style><a href=https://www.youtube.com/embed/QgZj0oc_NBQ?autoplay=1><img src=https://img.youtube.com/vi/QgZj0oc_NBQ/hqdefault.jpg alt='Skyfour'><span>▶</span></a>"
+                src="https://www.youtube.com/embed/ulg5uH86_mM"
+                srcDoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style><a href=https://www.youtube.com/embed/ulg5uH86_mM?autoplay=1><img src=https://img.youtube.com/vi/ulg5uH86_mM/maxresdefault.jpg alt='Skyfour'><span>▶</span></a>"
                 frameBorder="0"
                 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
