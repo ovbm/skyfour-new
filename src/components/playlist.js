@@ -11,52 +11,47 @@ import theme from '../utils/themeconstants';
 const playlist = [
   {
     name: "You'd be so nice (Jazzband)",
-    url: 'Youd-be-so-nice.mp3',
+    url: 'skyfour-2022-you-d-be-so-nice.mp3',
     type: 'audio/mp3',
   },
   {
     name: 'Chega de Saudade (Bossa)',
-    url: 'Chega-De-Saudade.mp3',
+    url: 'skyfour-2022-chega-de-saudade.mp3',
     type: 'audio/mp3',
   },
   {
     name: 'Happy - Pharell Williams (Pop)',
-    url: 'Happy.mp3',
+    url: 'skyfour-2022-happy.mp3',
     type: 'audio/mp3',
   },
   {
-    name: 'Cheap Thrills - Sia (Pop)',
-    url: 'Cheap-Thrills.mp3',
+    name: 'Don\'t Stop Now - Dua Lipa (Pop)',
+    url: 'skyfour-2022-dont-start-now.mp3',
     type: 'audio/mp3',
   },
   {
     name: 'I wish (R&B)',
-    url: 'I-wish.mp3',
+    url: 'skyfour-2022-I-wish.mp3',
     type: 'audio/mp3',
   },
   {
     name: 'Shape of You (Pop)',
-    url: 'Shape-of-you.mp3',
-    type: 'audio/mp3',
-  },
-  {
-    name: 'Golden (R&B)',
-    url: 'Golden.mp3',
-    type: 'audio/mp3',
-  },
-  {
-    name: 'Call me Maybe (Pop)',
-    url: 'Call-me-maybe.mp3',
+    url: 'skyfour-2022-shape-of-you.mp3',
     type: 'audio/mp3',
   },
   {
     name: 'Everything (Jazz Trio)',
-    url: 'Everything.mp3',
+    url: 'skyfour-2022-everything.mp3',
     type: 'audio/mp3',
   },
   {
-    name: 'Endless Stars (Duo)',
-    url: 'Endless-Stars.mp3',
+    name: 'All of Me (Duo, Hochzeitsballade)',
+    url: 'skyfour-2022-all-of-me.mp3',
+    type: 'audio/mp3',
+  },
+  {
+    name: 'What a Difference a Day Made (Background Duo)',
+    url: 'skyfour-2022-what-a-diffrence-a-day-made.mp3',
     type: 'audio/mp3',
   },
 ];
