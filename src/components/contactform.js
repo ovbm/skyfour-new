@@ -75,11 +75,9 @@ export default class extends React.Component {
               isSending: false,
             });
             if (typeof window !== 'undefined') {
-              window.gtag('event', 'click', {
-                category: 'email',
-                action: 'sent',
-                label: 'Form Email',
-                value: 50,
+              window.gtag('event', 'generate_lead', {
+                currency: 'CHF',
+                value: 80,
               });
             }
           }

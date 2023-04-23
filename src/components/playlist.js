@@ -73,7 +73,7 @@ const Samples = () => {
   useEffect(() => {
     if (playing) {
       if (typeof window !== 'undefined') {
-        window.gtag('event', 'click', {
+        window.gtag('event', 'play_audio', {
           category: 'audio',
         });
       }
