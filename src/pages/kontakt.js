@@ -1,7 +1,7 @@
 import React from 'react';
 import styled, { keyframes } from 'styled-components';
 import { Container as GridContainer, Row, Col } from 'react-grid-system';
-import { OutboundLink } from 'gatsby-plugin-google-analytics';
+import { OutboundLink } from 'gatsby-plugin-google-gtag';
 
 import Layout from '../components/layout';
 import SEO from '../components/seo';

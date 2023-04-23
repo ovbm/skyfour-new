@@ -9,5 +9,7 @@
     ```
     then
     ```sh
-    yarn dev
+    yarn develop
     ```
+
+### deplox website

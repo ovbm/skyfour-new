@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import Fileplayer from 'react-player/lib/players/FilePlayer';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCircle, faPlay, faPause } from '@fortawesome/free-solid-svg-icons';
-import { trackCustomEvent } from 'gatsby-plugin-google-analytics';
 
 import '../utils/range.scss';
 import theme from '../utils/themeconstants';
@@ -25,7 +24,7 @@ const playlist = [
     type: 'audio/mp3',
   },
   {
-    name: 'Don\'t Stop Now - Dua Lipa (Pop)',
+    name: "Don't Stop Now - Dua Lipa (Pop)",
     url: 'skyfour-2022-dont-start-now.mp3',
     type: 'audio/mp3',
   },
@@ -73,9 +72,11 @@ const Samples = () => {
 
   useEffect(() => {
     if (playing) {
-      trackCustomEvent({
-        category: 'audio',
-      });
+      if (typeof window !== 'undefined') {
+        window.gtag('event', 'click', {
+          category: 'audio',
+        });
+      }
     }
   }, [playing]);
 
@@ -128,10 +129,7 @@ const Samples = () => {
             onChange={(e) => setPlayed(parseFloat(e.target.value))}
             onMouseUp={handleSeekMouseUp}
           />
-          <progress
-            max={1}
-            value={loaded}
-          />
+          <progress max={1} value={loaded} />
         </Seeker>
       </Player>
       <Playlist>

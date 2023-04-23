@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 import SyncLoader from 'react-spinners/SyncLoader';
-import { trackCustomEvent } from 'gatsby-plugin-google-analytics';
 
 import theme from '../utils/themeconstants';
 
@@ -75,12 +74,14 @@ export default class extends React.Component {
               status: 'success',
               isSending: false,
             });
-            trackCustomEvent({
-              category: 'email',
-              action: 'sent',
-              label: 'Form Email',
-              value: 50,
-            });
+            if (typeof window !== 'undefined') {
+              window.gtag('event', 'click', {
+                category: 'email',
+                action: 'sent',
+                label: 'Form Email',
+                value: 50,
+              });
+            }
           }
         })
         .catch((err) => {

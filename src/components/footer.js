@@ -6,7 +6,7 @@ import {
   faEnvelope,
   faPhoneAlt,
 } from '@fortawesome/free-solid-svg-icons';
-import { OutboundLink } from 'gatsby-plugin-google-analytics';
+import { OutboundLink } from 'gatsby-plugin-google-gtag';
 
 import theme from '../utils/themeconstants';
 import SkyfourLogo from './logo';
@@ -35,7 +35,7 @@ function Footer() {
               color="black"
               icon={faPhoneAlt}
             />
-            <OutboundLink href="tel:+41795388936‬">079 538 89 36‬</OutboundLink>
+            <OutboundLink href="tel:+41795388936">079 538 89 36</OutboundLink>
           </p>
         </div>
         <div className="column">
