@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import styled from 'styled-components';
-import Fileplayer from 'react-player/lib/players/FilePlayer';
+import Fileplayer from 'react-player/file';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCircle, faPlay, faPause } from '@fortawesome/free-solid-svg-icons';
 

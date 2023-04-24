@@ -36,21 +36,18 @@ const StyledButton = styled.div`
   }
 `;
 
-const Button = ({ children, color, to, href, outward, textColor, justify }) => (
-  <>
-    {outward ? (
-      <OutboundLink style={{ textDecoration: 'none' }} href={href}>
-        <StyledButton color={color} justify={justify}>
-          <div style={{ color: textColor }}>{children}</div>
-        </StyledButton>
-      </OutboundLink>
-    ) : (
-      <StyledLink style={{ textDecoration: 'none' }} to={to}>
-        <StyledButton color={color} justify={justify}>
-          <div style={{ color: textColor }}>{children}</div>
-        </StyledButton>
-      </StyledLink>
-    )}
-  </>
-);
+const Button = ({ children, color, to, href, outward, textColor, justify }) =>
+  outward ? (
+    <OutboundLink style={{ textDecoration: 'none' }} href={href}>
+      <StyledButton color={color} justify={justify}>
+        <div style={{ color: textColor }}>{children}</div>
+      </StyledButton>
+    </OutboundLink>
+  ) : (
+    <StyledLink style={{ textDecoration: 'none' }} to={to}>
+      <StyledButton color={color} justify={justify}>
+        <div style={{ color: textColor }}>{children}</div>
+      </StyledButton>
+    </StyledLink>
+  );
 export default Button;
