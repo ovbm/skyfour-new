@@ -4,13 +4,12 @@ import { Script } from 'gatsby';
 const RootElement = ({ children }) => {
   return (
     <Fragment>
-      <Script
-        strategy="afterInteractive"
-        src={`https://www.googletagmanager.com/gtag/js?id=G-8H75VMWEYW`}
+      {children}
+      <script
+        src="https://www.googletagmanager.com/gtag/js?id=G-8H75VMWEYW"
       />
-      <Script
+      <script
         id="google-analytics"
-        strategy="afterInteractive"
         dangerouslySetInnerHTML={{
           __html: `
                 window.dataLayer = window.dataLayer || [];
@@ -23,12 +22,12 @@ const RootElement = ({ children }) => {
                     'ad_personalization': 'denied',
                     'ad_storage': 'denied',
                 });
+                console.log("gtag");
                 
                 gtag('config', 'G-8H75VMWEYW', { send_page_view: false });
                 `,
         }}
       />
-      <div>{children}</div>
     </Fragment>
   );
 };
