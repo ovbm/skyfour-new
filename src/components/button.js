@@ -1,9 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
-import { OutboundLink } from 'gatsby-plugin-google-gtag';
 
 import Link from './link';
 import theme from '../utils/themeconstants';
+import OutboundLink from './OutboundLink';
 
 const StyledLink = styled(Link)`
   text-decoration: none;

@@ -9,6 +9,7 @@ import Header from './header';
 import Footer from './footer';
 import MobileNav from './mobilenav';
 import FontStyles from '../utils/fontstyles';
+import CookieBanner from './cookiebanner';
 
 const ContentBody = styled.div`
   z-index: 10;
@@ -84,6 +85,7 @@ const Layout = ({ children, parent, dark }) => {
   return (
     <>
       <FontStyles />
+      <CookieBanner />
       <ContentBody
         dark={dark}
         mobileNavExpanded={mobileNavExpanded}

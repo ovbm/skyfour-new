@@ -1,73 +1,65 @@
 {
- "name": "skyfour.ch",
- "private": true,
- "description": "frontent of skyfour.ch",
- "version": "1.0.0",
- "author": "Olivier Baumann <olivier@iovi.io>",
- "dependencies": {
-  "@fortawesome/fontawesome-svg-core": "^6.4.0",
-  "@fortawesome/free-solid-svg-icons": "^6.4.0",
-  "@fortawesome/react-fontawesome": "^0.2.0",
-  "gatsby": "^5.9.0",
-  "gatsby-plugin-google-gtag": "5.9.0",
-  "gatsby-plugin-image": "^3.9.0",
-  "gatsby-plugin-react-helmet": "^6.9.0",
-  "gatsby-plugin-react-helmet-canonical-urls": "^1.4.0",
-  "gatsby-plugin-react-svg": "^3.0.1",
-  "gatsby-plugin-remove-serviceworker": "^1.0.0",
-  "gatsby-plugin-remove-trailing-slashes": "^4.19.0",
-  "gatsby-plugin-sass": "6.9.0",
-  "gatsby-plugin-sharp": "^5.9.0",
-  "gatsby-plugin-styled-components": "^6.9.0",
-  "gatsby-plugin-typography": "^5.9.0",
-  "gatsby-plugin-webpack-bundle-analyser-v2": "^1.1.9",
-  "gatsby-source-filesystem": "^5.9.0",
-  "gatsby-transformer-sharp": "^5.9.0",
-  "prop-types": "^15.6.2",
-  "pure-react-carousel": "^1.27.1",
-  "react": "18.2.0",
-  "react-dom": "18.2.0",
-  "react-ga": "^3.3.0",
-  "react-grid-system": "^8.1.9",
-  "react-helmet": "^6.1.0",
-  "react-parallax": "^3.0.3",
-  "react-player": "2.12.0",
-  "react-spinners": "^0.13.8",
-  "react-typography": "^0.16.19",
-  "sass": "^1.62.0",
-  "styled-components": "^5.3.0",
-  "typography": "^0.16.18"
- },
- "keywords": [
-  "gatsby"
- ],
- "license": "MIT",
- "scripts": {
-  "build": "gatsby build",
-  "develop": "gatsby develop",
-  "start": "npm run develop",
-  "format": "prettier --write \"src/**/*.js\"",
-  "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\"",
-  "lint": "eslint --quiet src",
-  "deploy": "gatsby build --prefix-paths && gh-pages -d public"
- },
- "devDependencies": {
-  "@react-native-community/eslint-config": "^3.2.0",
-  "babel-eslint": "^10.1.0",
-  "babel-plugin-styled-components": "^2.1.1",
-  "eslint": "^8.39.0",
-  "eslint-config-airbnb": "^19.0.4",
-  "eslint-config-prettier": "^8.3.0",
-  "eslint-plugin-import": "^2.20.2",
-  "eslint-plugin-jsx-a11y": "^6.2.3",
-  "eslint-plugin-react": "^7.19.0",
-  "gh-pages": "^5.0.0"
- },
- "repository": {
-  "type": "git",
-  "url": "https://github.com/gatsbyjs/gatsby-starter-default"
- },
- "bugs": {
-  "url": "https://github.com/gatsbyjs/gatsby/issues"
- }
+  "name": "skyfour.ch",
+  "private": true,
+  "description": "frontent of skyfour.ch",
+  "version": "1.0.0",
+  "author": "Olivier Baumann <olivier@iovi.io>",
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.4.0",
+    "@fortawesome/free-solid-svg-icons": "^6.4.0",
+    "@fortawesome/react-fontawesome": "^0.2.0",
+    "gatsby": "^5.9.0",
+    "gatsby-plugin-image": "^3.9.0",
+    "gatsby-plugin-react-helmet": "^6.9.0",
+    "gatsby-plugin-react-helmet-canonical-urls": "^1.4.0",
+    "gatsby-plugin-react-svg": "^3.0.1",
+    "gatsby-plugin-remove-serviceworker": "^1.0.0",
+    "gatsby-plugin-remove-trailing-slashes": "^4.19.0",
+    "gatsby-plugin-sass": "6.9.0",
+    "gatsby-plugin-sharp": "^5.9.0",
+    "gatsby-plugin-styled-components": "^6.9.0",
+    "gatsby-plugin-typography": "^5.9.0",
+    "gatsby-plugin-webpack-bundle-analyser-v2": "^1.1.9",
+    "gatsby-source-filesystem": "^5.9.0",
+    "gatsby-transformer-sharp": "^5.9.0",
+    "js-cookie": "^3.0.5",
+    "prop-types": "^15.6.2",
+    "pure-react-carousel": "^1.27.1",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-ga": "^3.3.0",
+    "react-grid-system": "^8.1.9",
+    "react-helmet": "^6.1.0",
+    "react-parallax": "^3.0.3",
+    "react-player": "2.12.0",
+    "react-spinners": "^0.13.8",
+    "react-typography": "^0.16.19",
+    "sass": "^1.62.0",
+    "styled-components": "^5.3.0",
+    "typography": "^0.16.18"
+  },
+  "keywords": [
+    "gatsby"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "start": "npm run develop",
+    "format": "prettier --write \"src/**/*.js\"",
+    "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\"",
+    "lint": "eslint --quiet src",
+    "deploy": "gatsby build --prefix-paths && gh-pages -d public"
+  },
+  "devDependencies": {
+    "prettier": "^2.8.8",
+    "gh-pages": "^5.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+  },
+  "bugs": {
+    "url": "https://github.com/gatsbyjs/gatsby/issues"
+  }
 }

@@ -6,7 +6,7 @@ import {
   faEnvelope,
   faPhoneAlt,
 } from '@fortawesome/free-solid-svg-icons';
-import { OutboundLink } from 'gatsby-plugin-google-gtag';
+import OutboundLink from './OutboundLink';
 
 import theme from '../utils/themeconstants';
 import SkyfourLogo from './logo';
