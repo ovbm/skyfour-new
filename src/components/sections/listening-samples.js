@@ -33,10 +33,10 @@ const StyledContainer = styled.div`
   padding: 6em 0 4em 0;
   background: rgb(0, 0, 0);
   background: linear-gradient(
-    18deg,
-    rgba(0, 0, 0, 1) 0%,
-    rgba(6, 6, 77, 1) 53%,
-    rgba(127, 113, 134, 1) 100%
+    20deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(9, 9, 121, 1) 35%,
+    rgba(0, 212, 255, 1) 100%
   );
   @media only screen and (max-width: ${theme.dim.mobilebreakpoint}px) {
     padding: 4em 1em 2em 1em;

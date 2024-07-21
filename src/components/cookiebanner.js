@@ -50,9 +50,8 @@ const CookieBanner = () => {
       <Container>
         <p>
           {' '}
-          Diese Website nutzt Cookie von Google Analytics, um die Nutzung
-          unserer Website zu analysieren. Mit dem Klicken auf "Akzeptieren"
-          stimmen Sie der Nutzung zu.
+          Unsere Website setzt Cookies von Google Analytics ein, um die Nutzung
+          zu analysieren. Mit dem Klicken auf "Akzeptieren" stimmen Sie dem zu.
         </p>
         <StyledButton
           style={{

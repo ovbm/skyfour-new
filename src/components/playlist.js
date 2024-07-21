@@ -61,7 +61,7 @@ const Samples = () => {
   const [played, setPlayed] = useState(0);
   const [seeking, setSeeking] = useState(false);
   const [loaded, setLoaded] = useState(0);
-  const [url, setUrl] = useState(null);
+  const [url, setUrl] = useState(playlist[0].url);
   const [firstplay, setFirstplay] = useState(true);
   const reactPlayer = useRef(null);
 
@@ -100,6 +100,11 @@ const Samples = () => {
         onProgress={handleProgress}
         progressInterval={500}
         url={[{ src: url, type: 'audio/mp3' }]}
+        config={{
+          file: {
+            forceAudio: true,
+          },
+        }}
       />
       <Player>
         <div className="playbutton">
@@ -129,7 +134,7 @@ const Samples = () => {
             onChange={(e) => setPlayed(parseFloat(e.target.value))}
             onMouseUp={handleSeekMouseUp}
           />
-          <progress max={1} value={loaded} />
+          {/* <progress max={1} value={loaded} /> */}
         </Seeker>
       </Player>
       <Playlist>
@@ -186,6 +191,7 @@ const Playlist = styled.ul`
 `;
 
 const PlaylistItem = styled.button`
+  width: 100%;
   border: none;
   background-color: transparent;
   margin: 0;
